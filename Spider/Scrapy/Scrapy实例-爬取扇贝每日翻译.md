@@ -1,6 +1,6 @@
 # 基于scrapy爬取扇贝每日翻译板块
 
-## chrome调试分析扇贝网每日翻译板块
+## chrome调试分析扇贝网每日翻译板块
 
 * 打开chorme开发者工具，`network`工具，过滤只剩`XHR`
 
@@ -15,7 +15,7 @@
 
 ## 构建Scrapy项目
 
-### 创建Scrapy项目 `Scrapy startproject shanbaySpider`
+### 创建Scrapy项目 `Scrapy startproject shanbaySpider`
 
 [![2018-03-03_2.53.55.png](https://s26.postimg.org/r82vzbnd5/2018-03-03_2.53.55.png)](https://postimg.org/image/f67i56e4l/)
 
@@ -32,7 +32,7 @@ class ShanbayItem(scrapy.Item):
     topic_post_time = scrapy.Field()
 ```
 
-### 创建爬虫shanbay
+### 创建爬虫shanbay
 
 * 根据chrome调试，每一分页的`ajax Request URL`规则是`https://www.shanbay.com/api/v1/forum/11077/thread/?page=`,`page=`后面的数字是页数
 
@@ -124,7 +124,7 @@ class MysqlWithJsonPipeline(object):
         return item
 ```
 
-### 设置项目settings
+### 设置项目settings
 
 ```python
 #设置数据库初始化数据
